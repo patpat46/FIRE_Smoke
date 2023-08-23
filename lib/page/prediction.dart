@@ -76,7 +76,7 @@ class _PredictState extends State<Predict> {
   loadModel() async {
     //this function loads our model
     await Tflite.loadModel(
-      model: '-',
+      model: 'assets/yourmodel.tflite',
       labels: 'assets/labels.txt',
     );
   }
