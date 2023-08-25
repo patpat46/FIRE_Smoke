@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 class Disease extends StatelessWidget {
   Disease({Key? key}) : super(key: key);
 
-  final List<String> _typeDetail = [];
-
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
