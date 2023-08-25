@@ -110,7 +110,7 @@ class _PredictState extends State<Predict> {
       backgroundColor: Color.fromARGB(255, 255, 111, 0),
       body: Column(
         children: [
-          const Padding(padding: EdgeInsets.all(0)),
+          const Padding(padding: EdgeInsets.all(8)),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
@@ -140,7 +140,7 @@ class _PredictState extends State<Predict> {
                   Visibility(
                       visible: showText,
                       child: const Text(
-                        'เลือกรูปภาพของคุณ',
+                        'เลือกรูปภาพของคุณ\n',
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 24,
@@ -150,7 +150,7 @@ class _PredictState extends State<Predict> {
                   Visibility(
                       visible: hideText,
                       child: const Text(
-                        'ผลก็คือ!',
+                        'ผลก็คือ!\n',
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 24,

@@ -18,7 +18,7 @@ class _FactorState extends State<Factor> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
               Text(
-                'สาเหตุ',
+                'สาเหตุ\n',
                 style: TextStyle(
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontSize: 24,

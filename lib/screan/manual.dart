@@ -19,7 +19,7 @@ class _ManualState extends State<Manual> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
                 Text(
-                  'Manual',
+                  'Manual\n',
                   style: TextStyle(
                       color: Color.fromARGB(255, 255, 255, 255),
                       fontSize: 24,
@@ -36,7 +36,7 @@ class _ManualState extends State<Manual> {
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: Text(
-                    'วิธีการใช้งาน \n เลือกนำรูปภาพเข้ามาในรูปแบบถ่ายหรือเอาออกมาจากคลั่ง และรอการประมวลผล \n มีคำแนะนำสำหรับการใช้งานในหน้าที่เขียนว่า "Fire" ',
+                    'วิธีการใช้งาน \nเลือกนำรูปภาพเข้ามาในรูปแบบถ่ายหรือเอาออกมาจากคลั่ง และรอการประมวลผล \nมีคำแนะนำสำหรับการใช้งานในหน้าที่เขียนว่า "Fire" ',
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
