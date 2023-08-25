@@ -62,7 +62,7 @@ class _PredictState extends State<Predict> {
         });
       } else {
         setState(() {
-          predictText = 'คำทำนายที่ไม่รู้จัก';
+          predictText = 'ใส่อะไรมาเอาใหม่!';
         });
       }
 
@@ -155,7 +155,7 @@ class _PredictState extends State<Predict> {
                   Visibility(
                       visible: hideText,
                       child: const Text(
-                        'คำทำนาย',
+                        'รอแปปนะ',
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 24,
@@ -200,10 +200,9 @@ class _PredictState extends State<Predict> {
                                           margin: const EdgeInsets.all(30),
                                           padding: const EdgeInsets.all(20),
                                           decoration: BoxDecoration(
-                                            color:
-                                                _output[0]['label'] == 'Healthy'
-                                                    ? Colors.green[700]
-                                                    : Colors.red,
+                                            color: _output[0]['label'] == 'Fire'
+                                                ? Colors.green[700]
+                                                : Colors.red,
                                             borderRadius:
                                                 BorderRadius.circular(10),
                                           ),
