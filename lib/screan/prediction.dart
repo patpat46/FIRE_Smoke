@@ -56,9 +56,13 @@ class _PredictState extends State<Predict> {
         setState(() {
           predictText = 'โอกาศเกิดไฟป่า';
         });
-      } else {
+      } else if (_output[0]['label'] == 'smoke') {
         setState(() {
           predictText = 'โอกาศไม่เกิดไฟป่า';
+        });
+      } else {
+        setState(() {
+          predictText = '?อะไรใส่เข้ามา?';
         });
       }
       // ignore: unnecessary_null_comparison
