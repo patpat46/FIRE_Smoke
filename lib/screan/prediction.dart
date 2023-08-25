@@ -54,18 +54,13 @@ class _PredictState extends State<Predict> {
 
       if (_output[0]['label'] == 'Fire') {
         setState(() {
-          predictText = 'โอกาศไม่เกิดไฟป่า';
-        });
-      } else if (_output[0]['label'] == 'smoke') {
-        setState(() {
           predictText = 'โอกาศเกิดไฟป่า';
         });
       } else {
         setState(() {
-          predictText = 'ใส่อะไรมาเอาใหม่!';
+          predictText = 'โอกาศไม่เกิดไฟป่า';
         });
       }
-
       // ignore: unnecessary_null_comparison
       _confidence = _output != null
           ? (_output[0]['confidence'] * 100.0).toString().substring(0, 2)
