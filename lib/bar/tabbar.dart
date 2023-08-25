@@ -46,7 +46,7 @@ class _MyBottomBarState extends State<MyBottomBar> {
             label: 'Manual',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.grain),
+            icon: Icon(Icons.local_fire_department),
             label: 'Fire',
           ),
         ],
