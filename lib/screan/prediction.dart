@@ -56,13 +56,9 @@ class _PredictState extends State<Predict> {
         setState(() {
           predictText = 'โอกาศไม่เกิดไฟป่า';
         });
-      } else if (_output[0]['label'] == 'smoke') {
-        setState(() {
-          predictText = 'โอกาศเกิดไฟป่า';
-        });
       } else {
         setState(() {
-          predictText = 'ใส่อะไรมาเอาใหม่!';
+          predictText = 'โอกาศเกิดไฟป่า';
         });
       }
 
