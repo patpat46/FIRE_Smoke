@@ -115,7 +115,7 @@ class _PredictState extends State<Predict> {
       backgroundColor: Color.fromARGB(255, 255, 111, 0),
       body: Column(
         children: [
-          const Padding(padding: EdgeInsets.all(10)),
+          const Padding(padding: EdgeInsets.all(20)),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [

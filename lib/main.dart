@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Fire Classification',
       home: SplashScreen(),
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
     );
   }
 }

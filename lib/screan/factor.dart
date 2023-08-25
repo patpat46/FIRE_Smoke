@@ -29,24 +29,21 @@ class _FactorState extends State<Factor> {
           ),
           Center(
             child: Container(
-                height: 550,
-                width: 400,
                 alignment: Alignment.topCenter,
-                //margin: const EdgeInsets.all(10),
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   color: Color.fromARGB(255, 255, 255, 255),
-                  borderRadius: BorderRadius.circular(25),
+                  borderRadius: BorderRadius.circular(30),
                 ),
                 child: Text(
-                  "\t โอกาศการเกิดไฟป่านั้น มีหลายสาเหตุ เช่น การที่นักท่องเที่ยวตั้งแคมแล้วจกไฟทิ้งไว้ การเผ่าขยะไม่หมอด การเกิดฝ่าผ่าใส่ต้นไม้หรือเศษไม่แห้ง",
+                  'โอกาศการเกิดไฟป่านั้น มีหลายสาเหตุ เช่น การที่นักท่องเที่ยวตั้งแคมแล้วจกไฟทิ้งไว้ การเผ่าขยะไม่หมอด การเกิดฝ่าผ่าใส่ต้นไม้หรือเศษไม่แห้ง',
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: const Color.fromARGB(255, 0, 0, 0),
                   ),
                 )),
-          ),
+          )
         ],
       ),
     );
