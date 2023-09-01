@@ -52,7 +52,7 @@ class _PredictState extends State<Predict> {
       _output = output!;
       _loading = false;
 
-      if (_output[0]['label'] == 'Fire') {
+      if (_output[0]['label'] == 'fire') {
         setState(() {
           predictText = 'โอกาศเกิดไฟป่า';
         });
@@ -199,7 +199,7 @@ class _PredictState extends State<Predict> {
                                           margin: const EdgeInsets.all(30),
                                           padding: const EdgeInsets.all(20),
                                           decoration: BoxDecoration(
-                                            color: _output[0]['label'] == 'Fire'
+                                            color: _output[0]['label'] == 'fire'
                                                 ? Colors.green[700]
                                                 : Colors.red,
                                             borderRadius:
