@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:fire_smoke/screan/splash_screen.dart';
 
 void main() {

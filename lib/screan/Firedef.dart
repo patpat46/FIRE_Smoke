@@ -41,13 +41,17 @@ class Disease extends StatelessWidget {
                 )),
           ),
           Center(
-            child: ElevatedButton(
-              child: Text('โทรด่วน!'),
-              onPressed: () async {
-                await FlutterPhoneDirectCaller.callNumber(number);
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.black,
+            child: Container(
+              alignment: Alignment(0, -5),
+              // mainAxisAlignment: MainAxisAlignment.center,
+              child: ElevatedButton(
+                child: Text('โทรด่วน!'),
+                onPressed: () async {
+                  await FlutterPhoneDirectCaller.callNumber(number);
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black,
+                ),
               ),
             ),
           )
