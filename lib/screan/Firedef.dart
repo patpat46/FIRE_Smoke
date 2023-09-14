@@ -50,7 +50,7 @@ class Disease extends StatelessWidget {
                   await FlutterPhoneDirectCaller.callNumber(number);
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.black,
+                  backgroundColor: const Color.fromARGB(255, 255, 255, 255),
                 ),
               ),
             ),
