@@ -39,6 +39,20 @@ class Disease extends StatelessWidget {
                   ),
                 )),
           ),
+<<<<<<< Updated upstream
+=======
+          Center(
+            child: ElevatedButton(
+              child: Text('โทรด่วน!'),
+              onPressed: () async {
+                launch('tel://$number');
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.black,
+              ),
+            ),
+          )
+>>>>>>> Stashed changes
         ],
       ),
     );
