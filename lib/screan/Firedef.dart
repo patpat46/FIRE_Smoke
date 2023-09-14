@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 
 class Disease extends StatelessWidget {
   Disease({Key? key}) : super(key: key);
-
+  final number = '0946785969';
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -39,20 +40,17 @@ class Disease extends StatelessWidget {
                   ),
                 )),
           ),
-<<<<<<< Updated upstream
-=======
           Center(
             child: ElevatedButton(
               child: Text('โทรด่วน!'),
               onPressed: () async {
-                launch('tel://$number');
+                await FlutterPhoneDirectCaller.callNumber(number);
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.black,
               ),
             ),
           )
->>>>>>> Stashed changes
         ],
       ),
     );
