@@ -57,7 +57,7 @@ class Disease extends StatelessWidget {
             ],
           ),
           GestureDetector(
-            onLongPress: () async {
+            onTap: () async {
               final Uri url = Uri(
                 scheme: 'tel',
                 path: "+66946785969",
