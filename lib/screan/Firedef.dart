@@ -1,8 +1,10 @@
+import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 
 class Disease extends StatelessWidget {
   Disease({Key? key}) : super(key: key);
 
+  final number = '+66946785969';
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -39,6 +41,29 @@ class Disease extends StatelessWidget {
                   ),
                 )),
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Icon(
+                Icons.camera_alt_rounded,
+                color: Color.fromARGB(255, 255, 255, 255),
+              ),
+              SizedBox(width: 10),
+              Text(
+                'โทรด่วน',
+                style: TextStyle(
+                    color: Color.fromARGB(255, 255, 254, 254), fontSize: 18),
+              ),
+            ],
+          ),
+          GestureDetector(
+            onLongPress: () async {
+              final Uri url = Uri(
+                scheme: 'tel',
+                path: "+66946785969",
+              );
+            },
+          )
         ],
       ),
     );
