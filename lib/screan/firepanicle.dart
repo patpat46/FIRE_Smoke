@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:fire_smoke/screan/factor.dart';
 import 'package:fire_smoke/screan/Firedef.dart';
+import 'package:fire_smoke/screan/factor.dart';
+import 'package:flutter/material.dart';
 
 class RicePanicle extends StatefulWidget {
   const RicePanicle({Key? key}) : super(key: key);
@@ -93,7 +93,7 @@ class _RicePanicleState extends State<RicePanicle>
               controller: _tabController, // เพิ่ม controller ที่นี่
               children: [
                 Factor(), // เปลี่ยนเป็นหน้าจอที่ต้องการแสดงผลในแท็บ "สาเหตุ"
-                Disease(), // เปลี่ยนเป็นหน้าจอที่ต้องการแสดงผลในแท็บ "ลักษณะอาการ"
+                Disease(), // เปลี่ยนเป็นหน้าจอที่ต้องการแสดงผลในแท็บ "ผล"
                 // หน้าจออื่น ๆ ที่คุณต้องการแสดงผลในแท็บอื่น ๆ
               ],
             ),

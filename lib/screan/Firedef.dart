@@ -42,8 +42,7 @@ class Disease extends StatelessWidget {
           ),
           Center(
             child: Container(
-              alignment: Alignment(0, -15),
-              // mainAxisAlignment: MainAxisAlignment.center,
+              alignment: Alignment(0, -15), //กลาง, ล่าง 15
               child: ElevatedButton(
                 child: Text('โทรด่วน!'),
                 onPressed: () async {
