@@ -10,6 +10,7 @@ class Manual extends StatefulWidget {
 class _ManualState extends State<Manual> {
   @override
   Widget build(BuildContext context) {
+    ///number phone
     return Scaffold(
         backgroundColor: Color.fromARGB(255, 254, 106, 0),
         body: Column(
@@ -36,7 +37,7 @@ class _ManualState extends State<Manual> {
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: Text(
-                    'วิธีการใช้งาน \n เลือกนำรูปภาพเข้ามาในรูปแบบถ่ายหรือเอาออกมาจากคลั่ง และรอการประมวลผล \n มีคำแนะนำสำหรับการใช้งานในหน้าที่เขียนว่า "Fire" ',
+                    'วิธีการใช้งาน \n เลือกนำรูปภาพเข้ามาในรูปแบบถ่ายหรือเอาออกมาจากคลัง และรอการประมวลผล \n มีคำแนะนำสำหรับการใช้งานในหน้าที่เขียนว่า "Fire" ',
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -44,6 +45,7 @@ class _ManualState extends State<Manual> {
                     ),
                   )),
             ),
+            Center()
           ],
         ));
   }

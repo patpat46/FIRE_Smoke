@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Disease extends StatelessWidget {
   Disease({Key? key}) : super(key: key);
@@ -39,6 +41,22 @@ class Disease extends StatelessWidget {
                   ),
                 )),
           ),
+          Center(
+            ///box
+            child: Container(
+              alignment: Alignment(0, -15), //กลาง, ล่าง 15
+              child: ElevatedButton(
+                child: Text('โทรด่วน!'),
+                onPressed: () async {
+                  launch('tel://$number');
+                  await FlutterPhoneDirectCaller.callNumber(number);
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color.fromARGB(255, 0, 0, 0),
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );
