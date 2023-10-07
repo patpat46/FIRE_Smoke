@@ -151,7 +151,7 @@ class _PredictState extends State<Predict> {
                   Visibility(
                       visible: hideText,
                       child: const Text(
-                        'รอแปปนะ',
+                        'คำทำนายคือ',
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 24,
