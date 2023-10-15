@@ -202,6 +202,18 @@ class _PredictState extends State<Predict> {
                                             borderRadius:
                                                 BorderRadius.circular(10),
                                           ),
+
+                                          ///ค่าไฟป่า
+                                          foregroundDecoration: BoxDecoration(
+                                            color:
+                                                _output[0]['label'] == 'Smoke'
+                                                    ? Colors.green[700]
+                                                    : Colors.red,
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                          ),
+
+                                          ///ค่าควันไฟป่า พึ่งเอาเข้าตอนเที่ยงคืน
                                           child: Text(
                                             "$predictText $_confidence %",
                                             style: const TextStyle(
