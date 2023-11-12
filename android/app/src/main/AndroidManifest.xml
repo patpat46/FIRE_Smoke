@@ -1,7 +1,6 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.flutter_rice_classification">
-   <application
-        android:label="FireSmoke"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:label="fire_smoke"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

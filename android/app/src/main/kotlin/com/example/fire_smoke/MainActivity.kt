@@ -1,4 +1,4 @@
-package com.example.flutter_rice_classification
+package com.example.fire_smoke
 
 import io.flutter.embedding.android.FlutterActivity
 
