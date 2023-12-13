@@ -1,7 +1,8 @@
 import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'package:tflite/tflite.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:tflite/tflite.dart';
 
 class Predict extends StatefulWidget {
   const Predict({super.key});
@@ -229,7 +230,6 @@ class _PredictState extends State<Predict> {
                             ],
                           ),
                   ),
-
                   //predict
                   Column(
                     //image picker
