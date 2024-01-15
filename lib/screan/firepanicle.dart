@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:fire_smoke/screan/factor.dart';
 import 'package:fire_smoke/screan/Firedef.dart';
+import 'package:fire_smoke/screan/factor.dart';
+import 'package:flutter/material.dart';
 
 class RicePanicle extends StatefulWidget {
   const RicePanicle({Key? key}) : super(key: key);

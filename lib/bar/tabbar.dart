@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:fire_smoke/screan/firepanicle.dart';
 import 'package:fire_smoke/screan/manual.dart';
 import 'package:fire_smoke/screan/prediction.dart';
-import 'package:fire_smoke/screan/firepanicle.dart';
+import 'package:flutter/material.dart';
 
 class MyBottomBar extends StatefulWidget {
   const MyBottomBar({Key? key});
