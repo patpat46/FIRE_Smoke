@@ -33,23 +33,23 @@ class _RicePanicleState extends State<RicePanicle>
         children: [
           Container(
             height: 70,
-            color: Color.fromARGB(255, 254, 106, 0),
+            color: const Color.fromARGB(255, 254, 106, 0),
             padding: const EdgeInsets.all(16),
             alignment: Alignment.center,
-            child: Text(
+            child: const Text(
               "สาเหตุ และ การป้องกัน",
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.w600,
-                color: const Color.fromARGB(255, 255, 255, 255),
+                color: Color.fromARGB(255, 255, 255, 255),
               ),
             ),
           ),
           Container(
             height: 70,
-            color: Color.fromARGB(255, 254, 106, 0),
+            color: const Color.fromARGB(255, 254, 106, 0),
             child: Container(
-              margin: EdgeInsets.all(15),
+              margin: const EdgeInsets.all(15),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 border: Border.all(color: Colors.grey),
@@ -58,16 +58,16 @@ class _RicePanicleState extends State<RicePanicle>
                 physics: const ClampingScrollPhysics(),
                 indicator: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
-                  color: Color.fromARGB(255, 0, 0, 0),
+                  color: const Color.fromARGB(255, 0, 0, 0),
                 ),
-                tabs: [
+                tabs: const [
                   Tab(
                     child: Align(
                       alignment: Alignment.center,
                       child: Text(
                         "สาเหตุ",
                         style: TextStyle(
-                          color: const Color.fromARGB(255, 255, 255, 255),
+                          color: Color.fromARGB(255, 255, 255, 255),
                         ),
                       ),
                     ),
@@ -78,7 +78,7 @@ class _RicePanicleState extends State<RicePanicle>
                       child: Text(
                         "การป้องกัน",
                         style: TextStyle(
-                          color: const Color.fromARGB(255, 255, 255, 255),
+                          color: Color.fromARGB(255, 255, 255, 255),
                         ),
                       ),
                     ),
@@ -92,7 +92,7 @@ class _RicePanicleState extends State<RicePanicle>
             child: TabBarView(
               controller: _tabController, // เพิ่ม controller ที่นี่
               children: [
-                Factor(), // เปลี่ยนเป็นหน้าจอที่ต้องการแสดงผลในแท็บ "สาเหตุ"
+                const Factor(), // เปลี่ยนเป็นหน้าจอที่ต้องการแสดงผลในแท็บ "สาเหตุ"
                 Disease(), // เปลี่ยนเป็นหน้าจอที่ต้องการแสดงผลในแท็บ "ลักษณะอาการ"
                 // หน้าจออื่น ๆ ที่คุณต้องการแสดงผลในแท็บอื่น ๆ
               ],
