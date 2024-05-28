@@ -91,8 +91,8 @@ class _FirePanicleState extends State<FirePanicle>
           Expanded(
             child: TabBarView(
               controller: _tabController, // เพิ่ม controller ที่นี่
-              children: [
-                const Factor(), // เปลี่ยนเป็นหน้าจอที่ต้องการแสดงผลในแท็บ "สาเหตุ"
+              children: const [
+                Factor(), // เปลี่ยนเป็นหน้าจอที่ต้องการแสดงผลในแท็บ "สาเหตุ"
                 Disease(), // เปลี่ยนเป็นหน้าจอที่ต้องการแสดงผลในแท็บ "ลักษณะอาการ"
                 // หน้าจออื่น ๆ ที่คุณต้องการแสดงผลในแท็บอื่น ๆ
               ],
