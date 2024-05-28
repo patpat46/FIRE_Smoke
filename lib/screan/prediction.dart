@@ -109,13 +109,13 @@ class _PredictState extends State<Predict> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 255, 111, 0),
+      backgroundColor: const Color.fromARGB(255, 255, 111, 0),
       body: Column(
         children: [
           const Padding(padding: EdgeInsets.all(20)),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               Text(
                 'Fire Scan',
                 style: TextStyle(

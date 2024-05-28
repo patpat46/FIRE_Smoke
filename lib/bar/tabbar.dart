@@ -13,23 +13,23 @@ class MyBottomBar extends StatefulWidget {
 class _MyBottomBarState extends State<MyBottomBar> {
   int _currentIndex = 0;
 
-  final List<Widget> _screens = [
-    const Predict(),
-    const Manual(),
-    RicePanicle(),
+  final List<Widget> _screens = const [
+    Predict(),
+    Manual(),
+    FirePanicle(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
         centerTitle: true,
         title: const Text('Fire Smoke Classification'),
       ),
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color.fromARGB(255, 255, 255, 255),
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         currentIndex: _currentIndex,
         onTap: (index) {
           setState(() {

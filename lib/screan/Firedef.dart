@@ -3,7 +3,7 @@ import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Disease extends StatelessWidget {
-  Disease({Key? key}) : super(key: key);
+  const Disease({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,9 +12,9 @@ class Disease extends StatelessWidget {
       child: Column(
         children: [
           const Padding(padding: EdgeInsets.all(10)),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               Text(
                 'การป้องกัน',
                 style: TextStyle(
@@ -30,24 +30,25 @@ class Disease extends StatelessWidget {
                 alignment: Alignment.topCenter,
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 255, 255, 255),
+                  color: const Color.fromARGB(255, 255, 255, 255),
                   borderRadius: BorderRadius.circular(30),
                 ),
-                child: Text(
+                child: const Text(
                   'การป้องกันนั้นสามารถทำได้หลายวิธี เริ่มจากดับไฟที่เคยจุดไว้,เข้าไปดับกองไฟที่ไม่ใหญ่มากด้วยการนำผ้าไปชุบน้ำและกลบบนลงกองไฟนั้น เมื่อเห็นควันไฟที่เราไม่สามารถทำอะไรได้ให้โทรแจ้ง 1362 และให้หลีกเลี่ยงจากควันไฟนั้นอย่างน้อย1กิโลเมตร',
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
-                    color: const Color.fromARGB(255, 0, 0, 0),
+                    color: Color.fromARGB(255, 0, 0, 0),
                   ),
                 )),
           ),
           Center(
             child: Container(
-                alignment: Alignment(0, -15),
+                alignment: const Alignment(0, -15),
                 child: ElevatedButton(
                   child: Text('โทรด่วน'),
                   onPressed: () async {
+                    // ignore: deprecated_member_use
                     launch('tel://$number');
                     await FlutterPhoneDirectCaller.callNumber(number);
                   },

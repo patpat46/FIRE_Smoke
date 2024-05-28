@@ -1,6 +1,7 @@
 import 'dart:async';
-import 'package:flutter/material.dart';
+
 import 'package:fire_smoke/bar/tabbar.dart';
+import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -16,22 +17,21 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(const Duration(seconds: 5), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (_) => MyBottomBar(),
+          builder: (_) => const MyBottomBar(),
         ),
       );
     });
   }
 
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Color.fromARGB(255, 255, 111, 0),
       body: SizedBox(
         width: double.infinity,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Image(image: AssetImage("assets/icons/logofire.png"))
-          ],
+          children: [Image(image: AssetImage("assets/icons/logofire.png"))],
         ),
       ),
     );

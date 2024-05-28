@@ -2,14 +2,14 @@ import 'package:fire_smoke/screan/Firedef.dart';
 import 'package:fire_smoke/screan/factor.dart';
 import 'package:flutter/material.dart';
 
-class RicePanicle extends StatefulWidget {
-  const RicePanicle({Key? key}) : super(key: key);
+class FirePanicle extends StatefulWidget {
+  const FirePanicle({Key? key}) : super(key: key);
 
   @override
-  State<RicePanicle> createState() => _RicePanicleState();
+  State<FirePanicle> createState() => _FirePanicleState();
 }
 
-class _RicePanicleState extends State<RicePanicle>
+class _FirePanicleState extends State<FirePanicle>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
@@ -28,7 +28,7 @@ class _RicePanicleState extends State<RicePanicle>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 254, 106, 0),
+      backgroundColor: const Color.fromARGB(255, 254, 106, 0),
       body: Column(
         children: [
           Container(
