@@ -25,7 +25,8 @@ class _MyBottomBarState extends State<MyBottomBar> {
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 0, 0, 0),
         centerTitle: true,
-        title: const Text('Fire Smoke Classification'),
+        title: const Text('Fire Smoke Classification',
+            style: TextStyle(color: Color.fromARGB(255, 252, 252, 252))),
       ),
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -46,7 +47,7 @@ class _MyBottomBarState extends State<MyBottomBar> {
             label: 'Manual',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.grain),
+            icon: Icon(Icons.local_fire_department),
             label: 'Fire',
           ),
         ],

@@ -128,7 +128,7 @@ class _PredictState extends State<Predict> {
             ),
             Center(
               child: Container(
-                height: 550,
+                height: 500,
                 width: 400,
                 alignment: Alignment.center,
                 margin: const EdgeInsets.all(10),
