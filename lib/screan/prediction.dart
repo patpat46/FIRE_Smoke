@@ -110,196 +110,201 @@ class _PredictState extends State<Predict> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 255, 111, 0),
-      body: Column(
-        children: [
-          const Padding(padding: EdgeInsets.all(20)),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Fire Scan',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold),
-              )
-            ],
-          ),
-          Center(
-            child: Container(
-              height: 550,
-              width: 400,
-              alignment: Alignment.center,
-              margin: const EdgeInsets.all(10),
-              padding: const EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(30),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Visibility(
-                      visible: showText,
-                      child: const Text(
-                        'เลือกรูปภาพของคุณ',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )),
-                  Visibility(
-                      visible: hideText,
-                      child: const Text(
-                        'คำทำนายคือ',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )),
-                  Visibility(
-                    visible: showImage,
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/icons/camera.png',
-                          height: 100,
-                        ),
-                        const SizedBox(height: 40),
-                      ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const Padding(padding: EdgeInsets.all(10)),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Fire Scan',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold),
+                )
+              ],
+            ),
+            Center(
+              child: Container(
+                height: 550,
+                width: 400,
+                alignment: Alignment.center,
+                margin: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Visibility(
+                        visible: showText,
+                        child: const Text(
+                          'เลือกรูปภาพของคุณ',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        )),
+                    Visibility(
+                        visible: hideText,
+                        child: const Text(
+                          'คำทำนายคือ',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        )),
+                    Visibility(
+                      visible: showImage,
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/icons/camera.png',
+                            height: 100,
+                          ),
+                          const SizedBox(height: 40),
+                        ],
+                      ),
                     ),
-                  ),
-                  Center(
-                    //predict
-                    child: _loading == true
-                        ? null //show nothing if no picture selected
-                        : Column(
-                            children: [
-                              SizedBox(
-                                height: MediaQuery.of(context).size.width * 0.5,
-                                width: MediaQuery.of(context).size.width * 0.5,
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(30),
-                                  child: Image.file(
-                                    _image,
-                                    fit: BoxFit.fill,
+                    Center(
+                      //predict
+                      child: _loading == true
+                          ? null //show nothing if no picture selected
+                          : Column(
+                              children: [
+                                SizedBox(
+                                  height:
+                                      MediaQuery.of(context).size.width * 0.5,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.5,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(30),
+                                    child: Image.file(
+                                      _image,
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
-                              ),
 
-                              // ignore: unnecessary_null_comparison
-                              _loading == false
-                                  ? Column(
-                                      children: [
-                                        Container(
-                                          margin: const EdgeInsets.all(30),
-                                          padding: const EdgeInsets.all(20),
-                                          decoration: BoxDecoration(
-                                            color: _output[0]['label'] == 'Fire'
-                                                ? Colors.green[700]
-                                                : Colors.red,
-                                            borderRadius:
-                                                BorderRadius.circular(10),
-                                          ),
+                                // ignore: unnecessary_null_comparison
+                                _loading == false
+                                    ? Column(
+                                        children: [
+                                          Container(
+                                            margin: const EdgeInsets.all(30),
+                                            padding: const EdgeInsets.all(20),
+                                            decoration: BoxDecoration(
+                                              color:
+                                                  _output[0]['label'] == 'Fire'
+                                                      ? Colors.green[700]
+                                                      : Colors.red,
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
 
-                                          ///ค่าไฟป่า
-                                          foregroundDecoration: BoxDecoration(
-                                            color:
-                                                _output[0]['label'] == 'Smoke'
-                                                    ? Colors.green[700]
-                                                    : Colors.red,
-                                            borderRadius:
-                                                BorderRadius.circular(10),
-                                          ),
+                                            ///ค่าไฟป่า
+                                            foregroundDecoration: BoxDecoration(
+                                              color:
+                                                  _output[0]['label'] == 'Smoke'
+                                                      ? Colors.green[700]
+                                                      : Colors.red,
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
 
-                                          ///ค่าควันไฟป่า พึ่งเอาเข้าตอนเที่ยงคืน
-                                          child: Text(
-                                            "$predictText $_confidence %",
-                                            style: const TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 18,
-                                              fontWeight: FontWeight.w400,
+                                            ///ค่าควันไฟป่า พึ่งเอาเข้าตอนเที่ยงคืน
+                                            child: Text(
+                                              "$predictText $_confidence %",
+                                              style: const TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.w400,
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                      ],
-                                    )
-                                  : Container(),
-                            ],
-                          ),
-                  ),
-                  //predict
-                  Column(
-                    //image picker
-                    children: [
-                      GestureDetector(
-                        onTap: pickImage,
-                        child: Container(
-                          width: MediaQuery.of(context).size.width - 160,
-                          alignment: Alignment.center,
-                          padding: const EdgeInsets.all(15), //symmetric(
-                          //     horizontal: 25, vertical: 15),
-                          decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 254, 106, 0),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Icon(
-                                Icons.camera_alt_rounded,
-                                color: Color.fromARGB(255, 0, 0, 0),
-                              ),
-                              SizedBox(width: 10),
-                              Text(
-                                'ถ่ายรูปภาพ',
-                                style: TextStyle(
-                                    color: Color.fromARGB(255, 0, 0, 0),
-                                    fontSize: 18),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 10),
-                      GestureDetector(
-                        onTap: pickGalleryImage,
-                        child: Container(
-                          width: MediaQuery.of(context).size.width - 160,
-                          alignment: Alignment.center,
-                          padding: const EdgeInsets.all(15), //symmetric(
-                          //     horizontal: 25, vertical: 15),
-                          decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 254, 106, 0),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Icon(
-                                Icons.photo_library,
-                                color: Color.fromARGB(255, 0, 0, 0),
-                              ),
-                              SizedBox(width: 10),
-                              Text(
-                                'เลือกจากแกลเลอรี',
-                                style: TextStyle(
-                                    color: Color.fromARGB(255, 0, 0, 0),
-                                    fontSize: 18),
-                              ),
-                            ],
+                                        ],
+                                      )
+                                    : Container(),
+                              ],
+                            ),
+                    ),
+                    //predict
+                    Column(
+                      //image picker
+                      children: [
+                        GestureDetector(
+                          onTap: pickImage,
+                          child: Container(
+                            width: MediaQuery.of(context).size.width - 160,
+                            alignment: Alignment.center,
+                            padding: const EdgeInsets.all(15), //symmetric(
+                            //     horizontal: 25, vertical: 15),
+                            decoration: BoxDecoration(
+                              color: const Color.fromARGB(255, 254, 106, 0),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: const Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.camera_alt_rounded,
+                                  color: Color.fromARGB(255, 0, 0, 0),
+                                ),
+                                SizedBox(width: 10),
+                                Text(
+                                  'ถ่ายรูปภาพ',
+                                  style: TextStyle(
+                                      color: Color.fromARGB(255, 0, 0, 0),
+                                      fontSize: 18),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                    ],
-                  ), //image picker
-                ],
+                        const SizedBox(height: 10),
+                        GestureDetector(
+                          onTap: pickGalleryImage,
+                          child: Container(
+                            width: MediaQuery.of(context).size.width - 160,
+                            alignment: Alignment.center,
+                            padding: const EdgeInsets.all(15), //symmetric(
+                            //     horizontal: 25, vertical: 15),
+                            decoration: BoxDecoration(
+                              color: const Color.fromARGB(255, 254, 106, 0),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: const Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.photo_library,
+                                  color: Color.fromARGB(255, 0, 0, 0),
+                                ),
+                                SizedBox(width: 10),
+                                Text(
+                                  'เลือกจากแกลเลอรี',
+                                  style: TextStyle(
+                                      color: Color.fromARGB(255, 0, 0, 0),
+                                      fontSize: 18),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ), //image picker
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
