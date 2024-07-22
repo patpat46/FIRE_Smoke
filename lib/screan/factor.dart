@@ -27,6 +27,7 @@ class _FactorState extends State<Factor> {
               ),
             ],
           ),
+          Padding(padding: EdgeInsets.all(5)),
           Center(
             child: Container(
                 alignment: Alignment.topCenter,

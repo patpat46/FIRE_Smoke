@@ -25,6 +25,7 @@ class Disease extends StatelessWidget {
               ),
             ],
           ),
+          const Padding(padding: EdgeInsets.all(5)),
           Center(
             child: Container(
                 alignment: Alignment.topCenter,
@@ -42,17 +43,23 @@ class Disease extends StatelessWidget {
                   ),
                 )),
           ),
+          const Padding(padding: EdgeInsets.all(10)),
           Center(
             child: Container(
                 alignment: const Alignment(0, -15),
                 child: ElevatedButton(
-                  child: Text('โทรด่วน'),
                   onPressed: () async {
                     // ignore: deprecated_member_use
                     launch('tel://$number');
                     await FlutterPhoneDirectCaller.callNumber(number);
                   },
-                  style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor:
+                          const Color.fromARGB(255, 255, 255, 255)),
+                  child: const Text(
+                    'โทรด่วน',
+                    style: TextStyle(color: Colors.black),
+                  ),
                 )),
           ),
         ],

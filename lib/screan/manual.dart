@@ -27,6 +27,7 @@ class _ManualState extends State<Manual> {
                 )
               ],
             ),
+            const Padding(padding: EdgeInsets.all(10)),
             Center(
               child: Container(
                   alignment: Alignment.topCenter,
