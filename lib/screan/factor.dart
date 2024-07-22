@@ -27,7 +27,7 @@ class _FactorState extends State<Factor> {
               ),
             ],
           ),
-          Padding(padding: EdgeInsets.all(5)),
+          const Padding(padding: EdgeInsets.all(5)),
           Center(
             child: Container(
                 alignment: Alignment.topCenter,
@@ -37,7 +37,7 @@ class _FactorState extends State<Factor> {
                   borderRadius: BorderRadius.circular(30),
                 ),
                 child: const Text(
-                  'โอกาศการเกิดไฟป่านั้น มีหลายสาเหตุ เช่น การที่นักท่องเที่ยวตั้งแคมแล้วจกไฟทิ้งไว้ การเผ่าขยะไม่หมอด การเกิดฝ่าผ่าใส่ต้นไม้หรือเศษไม่แห้ง',
+                  'โอกาศการเกิดไฟป่านั้น มีหลายสาเหตุ เช่น การที่นักท่องเที่ยวตั้งแคมแล้วจุดไฟทิ้งไว้ การเผ่าขยะไม่หมอด การเกิดฝ่าผ่าใส่ต้นไม้หรือเศษไม่แห้ง',
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
