@@ -51,15 +51,24 @@ class _FirePanicleState extends State<FirePanicle>
             child: Container(
               margin: const EdgeInsets.all(15),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(100),
                 border: Border.all(color: Colors.grey),
               ),
               child: TabBar(
                 physics: const ClampingScrollPhysics(),
+                indicatorSize:
+                    TabBarIndicatorSize.tab, // ให้ indicator ครอบคลุมแท็บ
                 indicator: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
                   color: const Color.fromARGB(255, 0, 0, 0),
                 ),
+                indicatorPadding: EdgeInsets.zero, // ปรับ indicator padding
+                indicatorWeight: 0.01, // ทำให้เส้น indicator บางที่สุด
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 0), // ปรับขนาด padding ของ TabBar
+                labelColor: Colors.white, // สีของตัวอักษรที่ถูกเลือก
+                unselectedLabelColor:
+                    Colors.black, // สีของตัวอักษรที่ไม่ได้ถูกเลือก
                 tabs: const [
                   Tab(
                     child: Align(
@@ -67,7 +76,7 @@ class _FirePanicleState extends State<FirePanicle>
                       child: Text(
                         "สาเหตุ",
                         style: TextStyle(
-                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontSize: 16,
                         ),
                       ),
                     ),
@@ -78,7 +87,7 @@ class _FirePanicleState extends State<FirePanicle>
                       child: Text(
                         "การป้องกัน",
                         style: TextStyle(
-                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontSize: 16,
                         ),
                       ),
                     ),
