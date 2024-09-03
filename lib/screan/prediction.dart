@@ -193,7 +193,7 @@ class _PredictState extends State<Predict> {
                                 ),
 
                                 // ignore: unnecessary_null_comparison
-                                _loading == false
+                                _loading == true
                                     ? Column(
                                         children: [
                                           Container(
